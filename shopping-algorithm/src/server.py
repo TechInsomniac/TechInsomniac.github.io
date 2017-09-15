@@ -1,11 +1,11 @@
 from flask import Flask
+from flask import jsonify
+
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello World!"
-
-from flask import jsonify
+    return jsonify(response="Hello World!")
 
 @app.route('/_get_current_user')
 def get_current_user():
